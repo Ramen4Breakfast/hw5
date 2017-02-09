@@ -51,19 +51,19 @@
 
 				<div class="col-md-4 text-center">
 
-					<button onclick="addOlives()" type="button" class="btn btn-default">Add Olives</button>
+					<button onclick="incTotal()" type="button" class="btn btn-default">Add Olives</button>
 
 				</div>
 
 				<div class="col-md-4 text-center">
 
-					<button onclick="addPeppers()" type="button" class="btn btn-default"> Add Peppers</button>
+					<button onclick="incTotal()" type="button" class="btn btn-default"> Add Peppers</button>
 
 				</div>
 
 				<div class="col-md-4 text-center">
 
-					<button onclick="addMushrooms()" type="button" class="btn btn-default">Add Mushrooms</button>
+					<button onclick="incTotal()" type="button" class="btn btn-default">Add Mushrooms</button>
 
 				</div>
 
@@ -115,11 +115,29 @@
 
 			<div class="col-md-12 text-center">
 
-			  	<h4>Your Total:</h4>
+			  	<h4 id="total">
+			  	hello
+			  	</h4>
 
 			</div>
 
 		</div>
+
+		<script type="text/javascript">
+			
+			var total = 0;
+
+			function incTotal()
+
+			{
+
+			total++;
+
+			document.getElementById('total').innerHTML = "Your Number of Toppings: " + total;
+
+			}
+
+		</script>>
 
 	</body>
 
