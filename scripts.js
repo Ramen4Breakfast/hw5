@@ -14,9 +14,10 @@ function clearAll()
 
 {
 	
-	var "total" = 0;
+	total = 0;
   	document.getElementById('para1').innerHTML = "";
   	document.getElementById('para2').innerHTML = "";
   	document.getElementById('para3').innerHTML = "";
+  	document.getElementById('total').innerHTML = "Your Number of Toppings: " + total;
 
 }
