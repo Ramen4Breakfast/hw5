@@ -1,11 +1,7 @@
 var total = 0;
 var receipt = [];
-var myString = document.getElementById("order").value;
 
-function showString()
-{
-	console.log(order);
-}
+console.log("myString");
 
 function addMushroom()
 {
@@ -51,4 +47,17 @@ function printReceipt()
 
 	document.getElementById("receipt").innerHTML = receipt;
 
+}
+
+	function Order() {
+  
+  var myString = document.getElementById("order").value;
+	var Order = myString.split(",");
+  
+  for (var i=0; i<Order.length; i++) {
+		Order[i] = Order[i].trim();
+
+
+	receipt.push (Order[i]);
+	}
 }
