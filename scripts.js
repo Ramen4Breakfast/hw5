@@ -1,7 +1,6 @@
 var total = 0;
 var receipt = [];
-
-console.log("myString");
+arrayLength = 0
 
 function addMushroom()
 {
@@ -31,7 +30,7 @@ function clearAll()
 	total = 0;
 	receipt = []
   	document.getElementById('total').innerHTML = "Your Number of Toppings: " + total;
-  	document.getElementById('receipt').innerHTML = "Please Select Toppings";
+  	document.getElementById('receipts').innerHTML = "Please Select Toppings";
 
 }
 
@@ -45,19 +44,22 @@ function typeTotal()
 function printReceipt()
 {
 
-	document.getElementById("receipt").innerHTML = receipt;
+	document.getElementById("receipts").innerHTML = receipt;
 
 }
 
-	function Order() {
+function Ordering() {
   
-  var myString = document.getElementById("order").value;
+  	var myString = document.getElementById("order").value;
+  	console.log(myString);
 	var Order = myString.split(",");
-  
-  for (var i=0; i<Order.length; i++) {
-		Order[i] = Order[i].trim();
-
-
-	receipt.push (Order[i]);
+	for (var i = 0; i < Order.length; i++) {
+		receipt.push(Order[i]);
 	}
-}
+
+	total = receipt.length;
+	document.getElementById('total').innerHTML = "Your Number of Toppings: " + total;
+
+
+
+	}
